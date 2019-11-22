@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kevja\\OneDrive\\CodeRepository\\Pomodoro\\Kevin\\Pomodoro\\Pomodoro\\Pomodoro.csproj": {}
+    "C:\\Users\\kevja\\OneDrive\\CodeRepository\\Pomodoro\\Pomodoro\\Pomodoro.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kevja\\OneDrive\\CodeRepository\\Pomodoro\\Kevin\\Pomodoro\\Pomodoro\\Pomodoro.csproj": {
+    "C:\\Users\\kevja\\OneDrive\\CodeRepository\\Pomodoro\\Pomodoro\\Pomodoro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kevja\\OneDrive\\CodeRepository\\Pomodoro\\Kevin\\Pomodoro\\Pomodoro\\Pomodoro.csproj",
+        "projectUniqueName": "C:\\Users\\kevja\\OneDrive\\CodeRepository\\Pomodoro\\Pomodoro\\Pomodoro.csproj",
         "projectName": "Pomodoro",
-        "projectPath": "C:\\Users\\kevja\\OneDrive\\CodeRepository\\Pomodoro\\Kevin\\Pomodoro\\Pomodoro\\Pomodoro.csproj",
+        "projectPath": "C:\\Users\\kevja\\OneDrive\\CodeRepository\\Pomodoro\\Pomodoro\\Pomodoro.csproj",
         "packagesPath": "C:\\Users\\kevja\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kevja\\OneDrive\\CodeRepository\\Pomodoro\\Kevin\\Pomodoro\\Pomodoro\\obj\\",
+        "outputPath": "C:\\Users\\kevja\\OneDrive\\CodeRepository\\Pomodoro\\Pomodoro\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
