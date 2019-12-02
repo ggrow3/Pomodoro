@@ -33,8 +33,8 @@ namespace Pomodoro
             Console.Write("Pomodoro Starting :");
 
             Console.WriteLine("Pomodoro Tasks:");
-            var i = new GoogleTasks();
-            i.Run();
+            var googleTasks = new GoogleTasks();
+            googleTasks.Run();
 
             for (int a = pomodoroSeconds; a >= 0; a--)
             {
@@ -66,10 +66,8 @@ namespace Pomodoro
             aTimer.Enabled = true;
         }
 
-                     
-
-
-            private static void OnTimedEvent(Object source, ElapsedEventArgs e)
+        
+        private static void OnTimedEvent(Object source, ElapsedEventArgs e)
         {
             currentInterval += aTimer.Interval;
             if(currentInterval >= stopTime)
@@ -79,55 +77,11 @@ namespace Pomodoro
                 return;
 
             }
-            // Console.WriteLine(aTimer.Interval);
             Console.Write("\rElapsed time {0:HH:mm:ss.fff}", e.SignalTime);
-         
-
         }
 
 
-        //static void Main(string[] args)
-        //{
-        //    startTime = DateTime.Now;
-
-        //    addTime = startTime.AddSeconds(10);
-
-        //    Console.WriteLine($"Start Time : {startTime}");
-        //    // Display the date/time when this method got called.
-        //    Console.WriteLine("In TimerCallback: " + startTime);
-        //    // Force a garbage collection to occur for this demo.
-
-        //    Timer t = new Timer(TimerCallback, null, 0, 1000);
-          
-            
-        //    // Wait for the user to hit <Enter>
-        //    Console.ReadLine();
-
-        //}
-
-        //private static void TimerCallback(Object o)
-        //{
-
-        //    Console.WriteLine($"Current Time : {DateTime.Now}");
-        //    if ( DateTime.Now > addTime)
-        //    {
-        //        Console.WriteLine("Pomodoro Over");
-        //            Console.WriteLine("Was your Pomodoro succesful? y/n");
-        //        successPomodoro = Console.ReadLine();
-
-        //        var line = $"{startTime},{DateTime.Now.ToString()},{successPomodoro}";
-        //        File.AppendAllText(FilePath, csv.ToString());
-        //        string successPomodoro;
-
-                  
-
-        //        return;
-                
-        //    }
-            
-        //    GC.Collect();
-        //}
-
+    
 
     }
 }
