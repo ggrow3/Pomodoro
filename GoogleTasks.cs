@@ -69,7 +69,13 @@ namespace Pomodoro
             {
                 Console.WriteLine("No task lists found.");
             }
-            Console.Read();
+        
+
+        }
+
+        public List<string> GetTasks()
+        {
+            return null;
 
         }
     }

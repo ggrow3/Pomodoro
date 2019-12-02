@@ -33,9 +33,26 @@ namespace Pomodoro
             Console.Write("Pomodoro Starting :");
 
             Console.WriteLine("Pomodoro Tasks:");
-            var googleTasks = new GoogleTasks();
-            googleTasks.Run();
 
+            Console.WriteLine("What do you want to use?");
+            Console.WriteLine("Option 1: Google");
+            Console.WriteLine("Option 2: Microsoft");
+            var option = Console.ReadLine();
+            if(option == "1")
+            {
+                var googleTasks = new GoogleTasks();
+                googleTasks.Run();
+            }
+            else
+            {
+                var outlookTasks = new OutlookTasks();
+                Console.WriteLine("Username:");
+                var username = Console.ReadLine();
+                Console.WriteLine("Password:");
+                var password = Console.ReadLine();
+                var m = outlookTasks.GetTasks(username, password);
+            }
+    
             for (int a = pomodoroSeconds; a >= 0; a--)
             {
                 Console.CursorLeft = 22;
