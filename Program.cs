@@ -13,7 +13,9 @@ namespace Pomodoro
 
         static DateTime startTime;
         static DateTime endTime;
-        static string FilePath = @"C:\Users\kevja\OneDrive\Pomodoro\Pomodoro.csv";
+       
+        static string FilePath = @"C:\Users\kneel.LJ\Desktop\Pomodoro.csv";
+        //static string FilePath = @"C:\Users\kevja\OneDrive\Pomodoro\Pomodoro.csv";
         static string csv = string.Empty;
 
         public static double currentInterval;
@@ -22,13 +24,18 @@ namespace Pomodoro
 
         public static void Main()
         {
-            int minutes = 0;
+            int minutes = 5;
 
             int timerSeconds = 10;
             int pomodoroSeconds =  (minutes * 60) + timerSeconds;
             startTime = DateTime.Now;
 
-            Console.Write("Pomodoro Starting:");
+            Console.Write("Pomodoro Starting :");
+
+            Console.WriteLine("Pomodoro Tasks:");
+            var i = new GoogleTasks();
+            i.Run();
+
             for (int a = pomodoroSeconds; a >= 0; a--)
             {
                 Console.CursorLeft = 22;

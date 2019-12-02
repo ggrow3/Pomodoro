@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kevja\\OneDrive\\CodeRepository\\Pomodoro\\Pomodoro\\Pomodoro.csproj": {}
+    "C:\\Users\\kneel.LJ\\Source\\Repos\\ggrow3\\Pomodoro\\Pomodoro.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kevja\\OneDrive\\CodeRepository\\Pomodoro\\Pomodoro\\Pomodoro.csproj": {
+    "C:\\Users\\kneel.LJ\\Source\\Repos\\ggrow3\\Pomodoro\\Pomodoro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kevja\\OneDrive\\CodeRepository\\Pomodoro\\Pomodoro\\Pomodoro.csproj",
+        "projectUniqueName": "C:\\Users\\kneel.LJ\\Source\\Repos\\ggrow3\\Pomodoro\\Pomodoro.csproj",
         "projectName": "Pomodoro",
-        "projectPath": "C:\\Users\\kevja\\OneDrive\\CodeRepository\\Pomodoro\\Pomodoro\\Pomodoro.csproj",
-        "packagesPath": "C:\\Users\\kevja\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kevja\\OneDrive\\CodeRepository\\Pomodoro\\Pomodoro\\obj\\",
+        "projectPath": "C:\\Users\\kneel.LJ\\Source\\Repos\\ggrow3\\Pomodoro\\Pomodoro.csproj",
+        "packagesPath": "C:\\Users\\kneel.LJ\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kneel.LJ\\Source\\Repos\\ggrow3\\Pomodoro\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\kevja\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kneel.LJ\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,12 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "dependencies": {
+            "Google.Apis.Tasks.v1": {
+              "target": "Package",
+              "version": "[1.42.0.1751, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
