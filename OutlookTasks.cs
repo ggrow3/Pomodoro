@@ -23,7 +23,7 @@ namespace Pomodoro
 
             using (var client = new HttpClient(handler))
             {
-                var url = "https://outlook.office365.com/api/v1.0/me/tasks";
+                var url = "https://outlook.office.com/api/v2.0/me/tasks";
                 var result = await client.GetStringAsync(url);
 
                 var data = JObject.Parse(result);

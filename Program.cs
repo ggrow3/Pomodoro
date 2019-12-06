@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Threading;
 using System.Timers;
 
@@ -22,9 +23,11 @@ namespace Pomodoro
         public static int stopTime = 10000;
         public static string success = "";
 
+ 
+
         public static void Main()
         {
-            int minutes = 5;
+            int minutes = 0;
 
             int timerSeconds = 10;
             int pomodoroSeconds =  (minutes * 60) + timerSeconds;
@@ -36,12 +39,24 @@ namespace Pomodoro
 
             Console.WriteLine("What do you want to use?");
             Console.WriteLine("Option 1: Google");
-            Console.WriteLine("Option 2: Microsoft");
+            //Console.WriteLine("Option 2: Microsoft");
             var option = Console.ReadLine();
+            var tasks = new List<Task>();
             if(option == "1")
             {
+                var itemNumber = 1;
                 var googleTasks = new GoogleTasks();
-                googleTasks.Run();
+                tasks = googleTasks.GetTasks().Where(x => !String.IsNullOrWhiteSpace(x.Title)).ToList().Select((x, i) => new Task()
+                {
+                     ItemNumber = i + 1,
+                     Title = x.Title
+
+                }).ToList();
+                foreach (var task in tasks)
+                {
+                        Console.WriteLine("{0} ({1})",itemNumber, task.Title);
+                        itemNumber++;
+                }
             }
             else
             {
@@ -52,7 +67,8 @@ namespace Pomodoro
                 var password = Console.ReadLine();
                 var m = outlookTasks.GetTasks(username, password);
             }
-    
+            var taskNumber = Convert.ToInt32(Console.ReadLine());
+
             for (int a = pomodoroSeconds; a >= 0; a--)
             {
                 Console.CursorLeft = 22;
@@ -64,41 +80,22 @@ namespace Pomodoro
             endTime = DateTime.Now;
             Console.WriteLine("\nWas the pomodoro a success?");
 
+            var taskTitle = tasks.Where(x => x.ItemNumber == taskNumber).SingleOrDefault().Title;
             var success = Console.ReadLine();
-            var csvLine = $"{startTime},{endTime},{pomodoroSeconds},{success}\n";
+            var csvLine = $"{startTime},{endTime},{pomodoroSeconds},{success},{taskTitle}\n";
             File.AppendAllText(FilePath, csvLine.ToString());
 
             Console.WriteLine("Terminating the application...");
         }
 
-        private static void SetTimer()
+
+
+        public class Task
         {
-            startTime = DateTime.Now;
-            // Create a timer with a two second interval.
-            aTimer = new System.Timers.Timer(1000);
-            // Hook up the Elapsed event for the timer. 
-            aTimer.Elapsed += OnTimedEvent;
-          
-            aTimer.AutoReset = true;
-            aTimer.Enabled = true;
+            public int ItemNumber { get; set; }
+            public string Title { get; set; }
         }
 
-        
-        private static void OnTimedEvent(Object source, ElapsedEventArgs e)
-        {
-            currentInterval += aTimer.Interval;
-            if(currentInterval >= stopTime)
-            {
-                aTimer.Stop();
-                endTime = e.SignalTime;
-                return;
-
-            }
-            Console.Write("\rElapsed time {0:HH:mm:ss.fff}", e.SignalTime);
-        }
-
-
-    
 
     }
 }

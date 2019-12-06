@@ -16,7 +16,7 @@ namespace Pomodoro
          string[] Scopes = { TasksService.Scope.TasksReadonly };
          string ApplicationName = "Google Tasks API .NET Quickstart";
 
-        public void Run()
+        public IList<Task> GetTasks()
         {
             UserCredential credential;
 
@@ -48,20 +48,22 @@ namespace Pomodoro
 
             // List task lists.
             IList<TaskList> taskLists = listRequest.Execute().Items;
-            Console.WriteLine("Task Lists:");
+            Console.WriteLine("Tasks:");
 
+            IList<Task> tasks2 = new List<Task>();
             if (taskLists != null && taskLists.Count > 0)
             {
                 foreach (var taskList in taskLists)
                 {
-                    Console.WriteLine("{0} ({1})", taskList.Title, taskList.Id);
+                  //  Console.WriteLine("{0} ({1})", taskList.Title, taskList.Id);
                     // Define parameters of request.
                     TasksResource.ListRequest taskListRequest = service.Tasks.List(taskList.Id);
                     taskListRequest.MaxResults = 40;
                       var tasks = taskListRequest.Execute().Items;
                     foreach (var task in tasks)
                     {
-                        Console.WriteLine("{0} ({1})", task.Title, task.Notes);
+                      //  Console.WriteLine("{0} ({1})", task.Title, task.Notes);
+                        tasks2.Add(task);
                     }
                 }
             }
@@ -69,14 +71,11 @@ namespace Pomodoro
             {
                 Console.WriteLine("No task lists found.");
             }
-        
 
+            //return taskLists;
+            return tasks2;
         }
 
-        public List<string> GetTasks()
-        {
-            return null;
-
-        }
+      
     }
 }

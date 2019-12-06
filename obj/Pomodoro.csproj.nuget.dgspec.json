@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kneel.LJ\\Source\\Repos\\ggrow3\\Pomodoro\\Pomodoro.csproj": {}
+    "C:\\Users\\kneel.LJ\\source\\repos\\ggrow3\\Pomodoro\\Pomodoro.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kneel.LJ\\Source\\Repos\\ggrow3\\Pomodoro\\Pomodoro.csproj": {
+    "C:\\Users\\kneel.LJ\\source\\repos\\ggrow3\\Pomodoro\\Pomodoro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kneel.LJ\\Source\\Repos\\ggrow3\\Pomodoro\\Pomodoro.csproj",
+        "projectUniqueName": "C:\\Users\\kneel.LJ\\source\\repos\\ggrow3\\Pomodoro\\Pomodoro.csproj",
         "projectName": "Pomodoro",
-        "projectPath": "C:\\Users\\kneel.LJ\\Source\\Repos\\ggrow3\\Pomodoro\\Pomodoro.csproj",
+        "projectPath": "C:\\Users\\kneel.LJ\\source\\repos\\ggrow3\\Pomodoro\\Pomodoro.csproj",
         "packagesPath": "C:\\Users\\kneel.LJ\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kneel.LJ\\Source\\Repos\\ggrow3\\Pomodoro\\obj\\",
+        "outputPath": "C:\\Users\\kneel.LJ\\source\\repos\\ggrow3\\Pomodoro\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

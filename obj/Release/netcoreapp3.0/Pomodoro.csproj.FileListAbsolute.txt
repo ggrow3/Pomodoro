@@ -8,7 +8,6 @@ C:\Users\kneel.LJ\Source\Repos\ggrow3\Pomodoro\obj\Release\netcoreapp3.0\Pomodor
 C:\Users\kneel.LJ\Source\Repos\ggrow3\Pomodoro\obj\Release\netcoreapp3.0\Pomodoro.AssemblyInfo.cs
 C:\Users\kneel.LJ\Source\Repos\ggrow3\Pomodoro\obj\Release\netcoreapp3.0\Pomodoro.dll
 C:\Users\kneel.LJ\Source\Repos\ggrow3\Pomodoro\obj\Release\netcoreapp3.0\Pomodoro.pdb
-C:\Users\kneel.LJ\Source\Repos\ggrow3\Pomodoro\obj\Release\netcoreapp3.0\Pomodoro.csprojAssemblyReference.cache
 C:\Users\kneel.LJ\Source\Repos\ggrow3\Pomodoro\bin\Release\netcoreapp3.0\Google.Apis.dll
 C:\Users\kneel.LJ\Source\Repos\ggrow3\Pomodoro\bin\Release\netcoreapp3.0\Google.Apis.Auth.PlatformServices.dll
 C:\Users\kneel.LJ\Source\Repos\ggrow3\Pomodoro\bin\Release\netcoreapp3.0\Google.Apis.Auth.dll
