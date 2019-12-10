@@ -27,6 +27,8 @@ namespace Pomodoro
 
         public static void Main()
         {
+        
+
             int minutes = 0;
 
             int timerSeconds = 10;
@@ -78,6 +80,11 @@ namespace Pomodoro
                 System.Threading.Thread.Sleep(1000);
             }
             endTime = DateTime.Now;
+
+            for (int i = 37; i <= 1500; i += 100)
+            {
+                Console.Beep(i, 100);
+            }
             Console.WriteLine("\nWas the pomodoro a success?");
 
             var taskTitle = tasks.Where(x => x.ItemNumber == taskNumber).SingleOrDefault().Title;
