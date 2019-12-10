@@ -29,9 +29,9 @@ namespace Pomodoro
         {
         
 
-            int minutes = 0;
+            int minutes = 5;
 
-            int timerSeconds = 10;
+            int timerSeconds = 0;
             int pomodoroSeconds =  (minutes * 60) + timerSeconds;
             startTime = DateTime.Now;
 
@@ -97,11 +97,7 @@ namespace Pomodoro
 
 
 
-        public class Task
-        {
-            public int ItemNumber { get; set; }
-            public string Title { get; set; }
-        }
+   
 
 
     }
