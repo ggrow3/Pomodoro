@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v3.0": {
       "Pomodoro/1.0.0": {
         "dependencies": {
-          "Google.Apis.Tasks.v1": "1.42.0.1751"
+          "Google.Apis.Tasks.v1": "1.42.0.1751",
+          "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.9.8"
         },
         "runtime": {
           "Pomodoro.dll": {}
@@ -65,6 +66,16 @@
           }
         }
       },
+      "Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.8": {
+        "dependencies": {
+          "Microsoft.CodeAnalysis.VersionCheckAnalyzer": "2.9.8",
+          "Microsoft.CodeQuality.Analyzers": "2.9.8",
+          "Microsoft.NetCore.Analyzers": "2.9.8",
+          "Microsoft.NetFramework.Analyzers": "2.9.8"
+        }
+      },
+      "Microsoft.CodeAnalysis.VersionCheckAnalyzer/2.9.8": {},
+      "Microsoft.CodeQuality.Analyzers/2.9.8": {},
       "Microsoft.CSharp/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -85,8 +96,10 @@
           "System.Threading": "4.3.0"
         }
       },
+      "Microsoft.NetCore.Analyzers/2.9.8": {},
       "Microsoft.NETCore.Platforms/1.1.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
+      "Microsoft.NetFramework.Analyzers/2.9.8": {},
       "Microsoft.Win32.Primitives/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -902,12 +915,40 @@
       "path": "google.apis.tasks.v1/1.42.0.1751",
       "hashPath": "google.apis.tasks.v1.1.42.0.1751.nupkg.sha512"
     },
+    "Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FZhO7S+xinFrcRvPyIxPbFgY0Jg3X+KNkawhg7wwoVxnT/ySdoO162dyIMXfQQ6/qCmjNFHmTDXiNlpPNvKNyQ==",
+      "path": "microsoft.codeanalysis.fxcopanalyzers/2.9.8",
+      "hashPath": "microsoft.codeanalysis.fxcopanalyzers.2.9.8.nupkg.sha512"
+    },
+    "Microsoft.CodeAnalysis.VersionCheckAnalyzer/2.9.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iSjqkECKpagJPjzc7sMjD6rQWSznVYqTfUZ96yR0r0jDzA45TymBof350tlOfGDRvn4OrU/KKJav21/oZDttrA==",
+      "path": "microsoft.codeanalysis.versioncheckanalyzer/2.9.8",
+      "hashPath": "microsoft.codeanalysis.versioncheckanalyzer.2.9.8.nupkg.sha512"
+    },
+    "Microsoft.CodeQuality.Analyzers/2.9.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KevAiJKuolGKK84jDHMVGJjBAigH/86xyCVtbOzh5avUYzW7jPErdJW708byKKMiVKTwv027mbKCNnnOgNQHsA==",
+      "path": "microsoft.codequality.analyzers/2.9.8",
+      "hashPath": "microsoft.codequality.analyzers.2.9.8.nupkg.sha512"
+    },
     "Microsoft.CSharp/4.3.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-P+MBhIM0YX+JqROuf7i306ZLJEjQYA9uUyRDE+OqwUI5sh41e2ZbPQV3LfAPh+29cmceE1pUffXsGfR4eMY3KA==",
       "path": "microsoft.csharp/4.3.0",
       "hashPath": "microsoft.csharp.4.3.0.nupkg.sha512"
+    },
+    "Microsoft.NetCore.Analyzers/2.9.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zbGttCZ8T5wJiBDhgIaFWTrYa/X7zbCnQ76PEu/B4gb64KY+yB9gjkndsKWR+2TbOId76PN7WrSQAn+W7gr5jQ==",
+      "path": "microsoft.netcore.analyzers/2.9.8",
+      "hashPath": "microsoft.netcore.analyzers.2.9.8.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
@@ -922,6 +963,13 @@
       "sha512": "sha512-wu/A6SateUFUXyj5qtkVRWeETBmVy/cOOsuiGd/tYDKUxO3exUNWcwSPSMYmMO3da1M0lQ4AlmYDhPHnjp7JGw==",
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
+    },
+    "Microsoft.NetFramework.Analyzers/2.9.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8fZYJqeKBW5uuKBact26IeOBogchn5Km85klHqHneRY7Jxp+ERtrw8zJVumNFUVL68pIcf4uKPOY7zfBQ7eY3A==",
+      "path": "microsoft.netframework.analyzers/2.9.8",
+      "hashPath": "microsoft.netframework.analyzers.2.9.8.nupkg.sha512"
     },
     "Microsoft.Win32.Primitives/4.3.0": {
       "type": "package",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kneel.LJ\\source\\repos\\ggrow3\\Pomodoro\\Pomodoro.csproj": {}
+    "C:\\Users\\kneel.LJ\\Source\\Repos\\ggrow3\\Pomodoro\\Pomodoro.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kneel.LJ\\source\\repos\\ggrow3\\Pomodoro\\Pomodoro.csproj": {
+    "C:\\Users\\kneel.LJ\\Source\\Repos\\ggrow3\\Pomodoro\\Pomodoro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kneel.LJ\\source\\repos\\ggrow3\\Pomodoro\\Pomodoro.csproj",
+        "projectUniqueName": "C:\\Users\\kneel.LJ\\Source\\Repos\\ggrow3\\Pomodoro\\Pomodoro.csproj",
         "projectName": "Pomodoro",
-        "projectPath": "C:\\Users\\kneel.LJ\\source\\repos\\ggrow3\\Pomodoro\\Pomodoro.csproj",
+        "projectPath": "C:\\Users\\kneel.LJ\\Source\\Repos\\ggrow3\\Pomodoro\\Pomodoro.csproj",
         "packagesPath": "C:\\Users\\kneel.LJ\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kneel.LJ\\source\\repos\\ggrow3\\Pomodoro\\obj\\",
+        "outputPath": "C:\\Users\\kneel.LJ\\Source\\Repos\\ggrow3\\Pomodoro\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -44,6 +44,12 @@
             "Google.Apis.Tasks.v1": {
               "target": "Package",
               "version": "[1.42.0.1751, )"
+            },
+            "Microsoft.CodeAnalysis.FxCopAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.9.8, )"
             }
           },
           "imports": [
@@ -56,12 +62,22 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.0.1, 3.0.1]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

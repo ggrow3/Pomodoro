@@ -1,41 +1,31 @@
-﻿using System;
+﻿using PomodoroTest;
+using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Threading;
-using System.Timers;
 
 namespace Pomodoro
 {
     class Program
     {
-        private static System.Timers.Timer aTimer;
 
-        static DateTime startTime;
         static DateTime endTime;
        
-        static string FilePath = @"C:\Users\kneel.LJ\Desktop\Pomodoro.csv";
+        const string FilePath = @"C:\Users\kneel.LJ\Desktop\Pomodoro.csv";
         //static string FilePath = @"C:\Users\kevja\OneDrive\Pomodoro\Pomodoro.csv";
-        static string csv = string.Empty;
+     
 
-        public static double currentInterval;
         public static int stopTime = 10000;
-        public static string success = "";
+      
 
- 
+
+        //  https://github.com/ziyasal/FireSharp
+
 
         public static void Main()
         {
-        
 
-            int minutes = 5;
-
-            int timerSeconds = 0;
-            int pomodoroSeconds =  (minutes * 60) + timerSeconds;
-            startTime = DateTime.Now;
-
-            Console.Write("Pomodoro Starting :");
+           
 
             Console.WriteLine("Pomodoro Tasks:");
 
@@ -43,21 +33,21 @@ namespace Pomodoro
             Console.WriteLine("Option 1: Google");
             //Console.WriteLine("Option 2: Microsoft");
             var option = Console.ReadLine();
-            var tasks = new List<Task>();
-            if(option == "1")
+            var tasks = new List<PomodoroTask>();
+            if (option == "1")
             {
                 var itemNumber = 1;
                 var googleTasks = new GoogleTasks();
-                tasks = googleTasks.GetTasks().Where(x => !String.IsNullOrWhiteSpace(x.Title)).ToList().Select((x, i) => new Task()
+                tasks = googleTasks.GetTasks().Where(x => !String.IsNullOrWhiteSpace(x.Title)).ToList().Select((x, i) => new PomodoroTask()
                 {
-                     ItemNumber = i + 1,
-                     Title = x.Title
+                    ItemNumber = i + 1,
+                    Title = x.Title
 
                 }).ToList();
                 foreach (var task in tasks)
                 {
-                        Console.WriteLine("{0} ({1})",itemNumber, task.Title);
-                        itemNumber++;
+                    Console.WriteLine("{0} ({1})", itemNumber, task.Title);
+                    itemNumber++;
                 }
             }
             else
@@ -69,8 +59,30 @@ namespace Pomodoro
                 var password = Console.ReadLine();
                 var m = outlookTasks.GetTasks(username, password);
             }
+
             var taskNumber = Convert.ToInt32(Console.ReadLine());
 
+            int minutes = 5;
+
+            int timerSeconds = 0;
+
+            Console.Write("How many minutes:seconds? ");
+            
+            var pomodoroTimeInput = Console.ReadLine();
+
+            if(pomodoroTimeInput.Contains(":"))
+            {
+                var pti = pomodoroTimeInput.Split(":");
+                minutes = Convert.ToInt32(pti[0]);
+                timerSeconds = Convert.ToInt32(pti[1]);
+            }
+            else
+            {
+                minutes = Convert.ToInt32(pomodoroTimeInput);
+            }
+
+            
+            int pomodoroSeconds = (minutes * 60) + timerSeconds;
             for (int a = pomodoroSeconds; a >= 0; a--)
             {
                 Console.CursorLeft = 22;
@@ -81,7 +93,7 @@ namespace Pomodoro
             }
             endTime = DateTime.Now;
 
-            for (int i = 37; i <= 1500; i += 100)
+            for (int i = 37; i <= 2000; i += 100)
             {
                 Console.Beep(i, 100);
             }
@@ -89,15 +101,18 @@ namespace Pomodoro
 
             var taskTitle = tasks.Where(x => x.ItemNumber == taskNumber).SingleOrDefault().Title;
             var success = Console.ReadLine();
-            var csvLine = $"{startTime},{endTime},{pomodoroSeconds},{success},{taskTitle}\n";
+            var csvLine = $"{endTime.AddSeconds(-pomodoroSeconds)},{endTime},{pomodoroSeconds},{success},{taskTitle}\n";
             File.AppendAllText(FilePath, csvLine.ToString());
 
             Console.WriteLine("Terminating the application...");
+
         }
 
 
 
-   
+
+
+
 
 
     }

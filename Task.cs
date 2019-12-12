@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Pomodoro
+namespace PomodoroTest
 {
-    public class Task
+    public class PomodoroTask
     {
         public int ItemNumber { get; set; }
         public string Title { get; set; }
